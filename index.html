@@ -26,12 +26,24 @@
                         <li class="li_menu __li2"><a href="#">Главная</a></li>
                         <li class="li_menu __li3">
                             <a href="#">Услуги</a>
-                            <ul class="ul_sub-menu">
-                                <li class="li_sub-menu">3D-визуализация</li>
-                                <li class="li_sub-menu">3D-моделирование</li>
-                                <li class="li_sub-menu">360<sup>&deg;</sup> панорама</li>
-                                <li class="li_sub-menu">1</li>
-                            </ul>
+                            <div class="ul_sub-menu_container">
+                                <ul class="ul_sub-menu">
+                                    <li class="li_sub-menu"><a href="#">3D-визуализация</a></li>
+                                    <li class="li_sub-menu"><a href="#">3D-моделирование</a></li>
+                                    <li class="li_sub-menu"><a href="#">360<sup>&deg;</sup> панорама</a>
+                                        <ul class="ul_sub-menu_1">
+                                            <li class="li_sub-menu"><a href="#">Большая панорама</a></li>
+                                            <li class="li_sub-menu"><a href="#">Малая панорама</a>
+                                                <ul class="ul_sub-menu_2">
+                                                    <li class="li_sub-menu"><a href="#">Малая панорама 1</a></li>
+                                                    <li class="li_sub-menu"><a href="#">Малая панорама 2</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
                         </li>
                         <li class="li_menu __li4">
                             <a href="#">Контакты</a>
@@ -56,18 +68,14 @@
                 <div class="fullpage__content">
                     <!-- "Это целая страница" -->
 
-                    <h1>Это отличный 3д визуализатор</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero aperiam, soluta totam corrupti exercitationem eligendi. Minima, pariatur non repudiandae saepe voluptate, nemo, hic perferendis dolore nihil iure a? Ex.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero aperiam, soluta totam corrupti exercitationem eligendi. Minima, pariatur non repudiandae saepe voluptate, nemo, hic perferendis dolore nihil iure a? Ex.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero aperiam, soluta totam corrupti exercitationem eligendi. Minima, pariatur non repudiandae saepe voluptate, nemo, hic perferendis dolore nihil iure a? Ex.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero aperiam, soluta totam corrupti exercitationem eligendi. Minima, pariatur non repudiandae saepe voluptate, nemo, hic perferendis dolore nihil iure a? Ex.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero aperiam, soluta totam corrupti exercitationem eligendi. Minima, pariatur non repudiandae saepe voluptate, nemo, hic perferendis dolore nihil iure a? Ex.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero aperiam, soluta totam corrupti exercitationem eligendi. Minima, pariatur non repudiandae saepe voluptate, nemo, hic perferendis dolore nihil iure a? Ex.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero aperiam, soluta totam corrupti exercitationem eligendi. Minima, pariatur non repudiandae saepe voluptate, nemo, hic perferendis dolore nihil iure a? Ex.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero aperiam, soluta totam corrupti exercitationem eligendi. Minima, pariatur non repudiandae saepe voluptate, nemo, hic perferendis dolore nihil iure a? Ex.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero aperiam, soluta totam corrupti exercitationem eligendi. Minima, pariatur non repudiandae saepe voluptate, nemo, hic perferendis dolore nihil iure a? Ex.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero aperiam, soluta totam corrupti exercitationem eligendi. Minima, pariatur non repudiandae saepe voluptate, nemo, hic perferendis dolore nihil iure a? Ex.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt libero aperiam, soluta totam corrupti exercitationem eligendi. Minima, pariatur non repudiandae saepe voluptate, nemo, hic perferendis dolore nihil iure a? Ex.</p>
+                    <h1>Canvas</h1>
+                    <canvas id="canvas"></canvas>
+
+                    <div class="flextest">
+                        <div class="fl1">1</div>
+                        <div class="fl2">2</div>
+                        <div class="fl3">3</div>
+                    </div>
 
                 </div>
             </div>

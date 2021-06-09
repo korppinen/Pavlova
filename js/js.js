@@ -104,3 +104,29 @@ function showBurger(e) {
 // }
 
 button_burger.addEventListener('click', showBurger);
+
+
+
+console.log(Math.floor(Math.random() * 15));
+
+let arr = [];
+
+for (let index = 0; index < 15; index++) {
+    arr.push(Math.floor(Math.random() * 15));
+
+}
+
+console.log(arr);
+
+let canvas = document.getElementById("canvas");
+// console.log(canvas);
+let ctx = canvas.getContext('2d');
+console.log(ctx);
+ctx.fillStyle = 'rgba(251, 25, 25, 0.8)';
+ctx.fillRect(0, 0, 300, 150);
+ctx.beginPath();
+ctx.moveTo(50, 50);
+ctx.lineTo(80, 60);
+ctx.lineTo(180, 160);
+ctx.closePath();
+ctx.stroke();
