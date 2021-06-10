@@ -295,16 +295,30 @@ h3 {
 
 .li_img {
     /* flex: 1 1 auto; */
-    width: 250px;
-    height: 55px;
+    /* width: 250px;
+    height: 55px; */
     /* background-color: #77608d; */
-    background-image: url('/images/rendeko-logo-oranssi.png');
+    /* background-image: url('/images/rendeko-logo-oranssi.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-    /* display: flex;
+    background-size: contain; */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+}
+
+.pavlova {
+    font-size: 3em;
+    font-weight: 700;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    /* text-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5); */
+}
+
+.pavlova_1 {
+    padding-top: 10px;
 }
 
 .__li1 img {
@@ -340,7 +354,8 @@ h3 {
     /* padding: 0px 60px; */
 }
 
-.ul_menu>li a:hover::after {
+
+/* .ul_menu>li a:hover::after {
     content: '';
     display: block;
     position: absolute;
@@ -350,10 +365,48 @@ h3 {
     width: 100%;
     background-color: #fff;
     transition-duration: 0.3s;
-}
+} */
 
 
 /* суб меню */
+
+
+/* Стрелки в меню на тач скринах */
+
+.menu__arrow {
+    display: none;
+}
+
+body._touch .ul_menu>li {
+    display: flex;
+    align-items: baseline;
+}
+
+body._touch .menu__arrow {
+    display: block;
+    height: 0px;
+    width: 0px;
+    margin: 0px 0px 0px 5px;
+    border-top: 10px solid #fff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    transform: all 0.5s ease 0s;
+}
+
+body._touch .li_menu {
+    flex: 1 1 auto;
+}
+
+body._touch .ul_menu>li._active .ul_sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0px, 0px);
+    pointer-events: all;
+}
+
+body._touch .ul_menu>li._active .menu__arrow {
+    transform: rotate(-180deg);
+}
 
 .ul_sub-menu_container {}
 
@@ -376,10 +429,20 @@ h3 {
     display: none;
 }
 
-.ul_sub-menu a:hover {
-    /* text-decoration: underline 4px; */
+
+/* .ul_sub-menu a:hover { */
+
+
+/* text-decoration: underline 4px; */
+
+.ul_menu a:hover {
     border-bottom: 4px solid #fff;
     padding-bottom: 2px;
+    padding-top: 6px;
+}
+
+.ul_menu>li {
+    padding: 13px 0;
 }
 
 .ul_sub-menu>li {
@@ -387,13 +450,14 @@ h3 {
 }
 
 .ul_sub-menu>li:last-child {
-    background-color: #7a956b;
+    /* background-color: #7a956b; */
     /* margin-bottom: auto; */
 }
 
 .ul_sub-menu,
 .ul_sub-menu_1,
-.ul_sub-menu_2 {
+.ul_sub-menu_2,
+.ul_sub-menu_3 {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -413,7 +477,8 @@ h3 {
     min-height: 10em;
 }
 
-.ul_sub-menu_2 {
+.ul_sub-menu_2,
+.ul_sub-menu_3 {
     top: 30%;
     left: 80%;
     min-height: 8em;
@@ -422,7 +487,8 @@ h3 {
 
 .ul_sub-menu>li:last-child,
 .ul_sub-menu_1>li:last-child,
-.ul_sub-menu_1>li:last-child {
+.ul_sub-menu_2>li:last-child,
+.ul_sub-menu_3>li:last-child {
     height: 200px;
     /* margin-top: auto; */
     /* background-color: cadetblue; */
@@ -442,7 +508,8 @@ h3 {
     .ul_sub-menu_container {}
     .ul_sub-menu,
     .ul_sub-menu_1,
-    .ul_sub-menu_2 {
+    .ul_sub-menu_2,
+    .ul_sub-menu_3 {
         transition: all 0.5s ease 0s;
         opacity: 0;
         visibility: hidden;
@@ -465,6 +532,12 @@ body._pc .ul_sub-menu>li:hover .ul_sub-menu_1 {
 }
 
 body._pc .ul_sub-menu_1>li:hover .ul_sub-menu_2 {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+body._pc .ul_sub-menu_1>li:hover .ul_sub-menu_3 {
     opacity: 1;
     visibility: visible;
     pointer-events: all;

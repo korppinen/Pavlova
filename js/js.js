@@ -43,6 +43,19 @@ const isMobile = {
 
 if (isMobile.any()) {
     document.body.classList.add('_touch');
+
+    let menuArrows = document.querySelectorAll('.menu__arrow');
+
+    if (menuArrows.length > 0) {
+        for (let i = 0; i < menuArrows.length; i++) {
+            const menuArrow = menuArrows[i];
+
+            menuArrow.addEventListener('click', () => {
+                menuArrow.parentElement.classList.toggle('_active');
+            })
+        }
+    }
+
 } else {
     document.body.classList.add('_pc');
 }
@@ -107,16 +120,16 @@ button_burger.addEventListener('click', showBurger);
 
 
 
-console.log(Math.floor(Math.random() * 15));
+// console.log(Math.floor(Math.random() * 15));
 
-let arr = [];
+// let arr = [];
 
-for (let index = 0; index < 15; index++) {
-    arr.push(Math.floor(Math.random() * 15));
+// for (let index = 0; index < 15; index++) {
+//     arr.push(Math.floor(Math.random() * 15));
 
-}
+// }
 
-console.log(arr);
+// console.log(arr);
 
 let canvas = document.getElementById("canvas");
 // console.log(canvas);
