@@ -104,3 +104,25 @@ function showBurger(e) {
 // }
 
 button_burger.addEventListener('click', showBurger);
+
+
+function showMessage(num, text, name) {
+
+    console.log(`${num} текст ${text} имя ${name}` );
+    
+   
+    let timeId = setTimeout(() => {
+        showMessage(++num, '11', '23');
+    }, 1000); 
+    if (num === 6) {
+        clearTimeout (timeId);
+    }
+
+    
+}
+
+// setTimeout (showMessage, 3000, 1, 'Привет',"Дмитрий");
+setTimeout(() => {
+    showMessage(1, '11', '23');
+}, 1000);
+
