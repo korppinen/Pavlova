@@ -43,6 +43,19 @@ const isMobile = {
 
 if (isMobile.any()) {
     document.body.classList.add('_touch');
+
+    let menuArrows = document.querySelectorAll('.menu__arrow');
+
+    if (menuArrows.length > 0) {
+        for (let i = 0; i < menuArrows.length; i++) {
+            const menuArrow = menuArrows[i];
+
+            menuArrow.addEventListener('click', () => {
+                menuArrow.parentElement.classList.toggle('_active');
+            })
+        }
+    }
+
 } else {
     document.body.classList.add('_pc');
 }
@@ -106,6 +119,7 @@ function showBurger(e) {
 button_burger.addEventListener('click', showBurger);
 
 
+<<<<<<< HEAD
 function showMessage(num, text, name) {
 
     console.log(`${num} текст ${text} имя ${name}` );
@@ -126,3 +140,29 @@ setTimeout(() => {
     showMessage(1, '11', '23');
 }, 1000);
 
+=======
+
+// console.log(Math.floor(Math.random() * 15));
+
+// let arr = [];
+
+// for (let index = 0; index < 15; index++) {
+//     arr.push(Math.floor(Math.random() * 15));
+
+// }
+
+// console.log(arr);
+
+let canvas = document.getElementById("canvas");
+// console.log(canvas);
+let ctx = canvas.getContext('2d');
+console.log(ctx);
+ctx.fillStyle = 'rgba(251, 25, 25, 0.8)';
+ctx.fillRect(0, 0, 300, 150);
+ctx.beginPath();
+ctx.moveTo(50, 50);
+ctx.lineTo(80, 60);
+ctx.lineTo(180, 160);
+ctx.closePath();
+ctx.stroke();
+>>>>>>> 3c99428be8238302febeb54dd0290c8a6e90e3c7
