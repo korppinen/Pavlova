@@ -77,7 +77,7 @@ if (myClasses.length > 0) {
 
 }
 
-// конец тестп
+// конец теста
 
 const menuLinks = document.querySelectorAll('.li_menu [data-goto]');
 // const menuLinks = document.querySelectorAll('div [data-goto]');
