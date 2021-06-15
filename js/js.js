@@ -60,6 +60,57 @@ if (isMobile.any()) {
     document.body.classList.add('_pc');
 }
 
+
+// плавный переход по страницам
+
+// тест 
+let elements = document.getElementById('__fullpage_3');
+console.log(elements);
+
+const myClasses = document.getElementsByClassName('pavlova_1');
+
+if (myClasses.length > 0) {
+    for (const iterator of myClasses) {
+        console.log(iterator);
+        iterator.dataset.goto = '__fullpage_3';
+    }
+
+}
+
+// конец тестп
+
+const menuLinks = document.querySelectorAll('.li_menu [data-goto]');
+// const menuLinks = document.querySelectorAll('div [data-goto]');
+
+if (menuLinks.length > 0) {
+
+    menuLinks.forEach(menuLink => {
+        menuLink.addEventListener('click', onMenuLinkClick)
+    });
+
+    function onMenuLinkClick(e) {
+
+        const menuLink = e.target;
+        if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+
+            const gotoBlock = document.querySelector(menuLink.dataset.goto);
+            const gotoBlackValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.sticky_menu').offsetHeight;
+
+
+            window.scrollTo({
+                top: gotoBlackValue,
+                behavior: 'smooth',
+            });
+
+        }
+
+    }
+
+}
+
+
+
+
 // Конец проверки на мобильное устройство - добавили класс в body
 
 
@@ -134,7 +185,7 @@ button_burger.addEventListener('click', showBurger);
 let canvas = document.getElementById("canvas");
 // console.log(canvas);
 let ctx = canvas.getContext('2d');
-console.log(ctx);
+// console.log(ctx);
 ctx.fillStyle = 'rgba(251, 25, 25, 0.8)';
 ctx.fillRect(0, 0, 300, 150);
 ctx.beginPath();

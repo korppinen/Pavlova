@@ -601,3 +601,28 @@ body._pc .ul_sub-menu_1>li:hover .ul_sub-menu_3 {
 .fl3 {
     background-color: #7a956b;
 }
+
+
+/* анимация текст */
+
+.vis1 {
+    position: relative;
+    top: 0px;
+}
+
+.vis1:hover::after {
+    display: block;
+    height: 100px;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    content: attr(data-description);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    background-color: rgba(220, 145, 243, 0.363);
+    /* transform: scale(150%); */
+    transition: transform 0.5s ease 0s;
+    /* transform: scale(50%); */
+}
